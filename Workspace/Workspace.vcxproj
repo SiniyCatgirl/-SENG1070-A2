@@ -19,11 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\Downloads\Testing (2)\Testing\Testing\arithmetic.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Logging.cpp" />
+    <ClCompile Include="testHarnes.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Loging.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\Testing (2)\Testing\Testing\arithmetic.h" />
+    <ClInclude Include="Logging.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

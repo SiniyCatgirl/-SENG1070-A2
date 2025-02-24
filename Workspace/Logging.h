@@ -12,7 +12,8 @@ Handle file input/output operations.
 #include <iostream>
 #include <new.h>
 #include <string.h>
+#include <time.h>
 
-int write(const char* data, int* lineNum);
+void logMessage(const char* level, const char* message);
 
-int close(FILE*);
+void closeLogger(FILE*);

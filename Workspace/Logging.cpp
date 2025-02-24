@@ -13,18 +13,19 @@ Handle file input/output operations.
 /// <param name="data"></param>
 /// <param name="lineNum"></param>
 /// <returns>int</returns>
-int write(const char* data, int* lineNum) {
+void logMessage(const char* Level, int* Message) {
 	FILE* output = NULL;
 	fopen_s(&output, "program.log", "a");
 	if (output == NULL) {
-		printf("Error Opening the File");
-		return -1;
+		printf("Error Opening the log file");
 	}
 
-	
+	/*char* current_day, * current_time;
+	system("date +%F");
+	system("date +%T");
+	printf("%c", current_day);*/
 
-	close(output);
-	return 0;
+	closeLogger(output);
 }
 
 
@@ -33,14 +34,12 @@ int write(const char* data, int* lineNum) {
 /// </summary>
 /// <param name="file">file</param>
 /// <returns>int</returns>
-int close(FILE* file) {
+void closeLogger(FILE* file) {
 
 	if (fclose(file) == 0) {
 		printf("file closed sucsessfully\n");
-		return 0;
 	}
 	else {
 		printf("Error closing File\n");
-		return -1;
 	}
 }
