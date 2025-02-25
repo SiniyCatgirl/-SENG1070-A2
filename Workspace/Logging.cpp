@@ -5,7 +5,7 @@ last updated:9/02/2025
 discription:
 Handle file input/output operations.
 */
-#include "Loging.h"
+#include "Logging.h"
 
 /// <summary>
 /// 
@@ -13,19 +13,36 @@ Handle file input/output operations.
 /// <param name="data"></param>
 /// <param name="lineNum"></param>
 /// <returns>int</returns>
-void logMessage(const char* Level, int* Message) {
-	FILE* output = NULL;
-	fopen_s(&output, "program.log", "a");
-	if (output == NULL) {
+void logMessage(const char* Level, const char* Message, const char* Function) {
+	struct tm curentTime;
+	__time64_t long_time;
+	char timebuf[26];
+	errno_t err;
+
+	FILE* log = NULL;
+	fopen_s(&log, "program.log", "a");
+	if (log == NULL) {
 		printf("Error Opening the log file");
 	}
+	/*time_t now = time(NULL);
+	printf("\n%d\n",now);*/
+	_time64(&long_time);
+	// Convert to local time.
+	err = _localtime64_s(&curentTime, &long_time);
+	err = asctime_s(timebuf, 26, &curentTime);
+	//mabe figure out how to fill blank spaces with 0
+	fprintf(log, "\n%d-%2d-%2d    %2d:%2d:%2d\n", (curentTime.tm_year + 1900), (curentTime.tm_mon + 1), (curentTime.tm_mday), (curentTime.tm_hour), (curentTime.tm_min), (curentTime.tm_sec));//convert all to numbers, and in 24 hour tme
+
+	
+	//localtime_s();
+	//fprintf(log, "[%s]%s%s%s\n", asctime_s(local_time), Level, Message, Function);
 
 	/*char* current_day, * current_time;
 	system("date +%F");
 	system("date +%T");
 	printf("%c", current_day);*/
 
-	closeLogger(output);
+	closeLogger(log);
 }
 
 

@@ -14,6 +14,6 @@ Handle file input/output operations.
 #include <string.h>
 #include <time.h>
 
-void logMessage(const char* level, const char* message);
+void logMessage(const char* level, const char* message, const char* Function);
 
 void closeLogger(FILE*);

@@ -1,14 +1,19 @@
 #include "arithmetic.h"
+#include "Logging.h"
 #include <assert.h>
 #include <stdio.h>
-#include "Logging.h"
+#include <time.h>
 
 /*TEST HARNESS TAKEN FROM TESTING EXAMPLES GIVEN IN SLIDE DECK*/
 
 void test_add() {
+    const char kLevel[] = "ERROR";
+    const char kMessage[] = "Failed adding positive Numbers in ";
+    const char kFunction[] = "add";
     assert(add(2, 3) == 5);
     assert(add(-1, -1) == -2);
     printf("test_add passed!\n");
+    logMessage("ERROR", "Failed adding positive numbers in ", "add");
 }
 
 void test_subtract() {
