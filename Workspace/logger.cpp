@@ -5,7 +5,7 @@ last updated:9/02/2025
 discription:
 Handle file input/output operations.
 */
-#include "Logging.h"
+#include "Logger.h"
 
 /// <summary>
 /// 
@@ -30,17 +30,12 @@ void logMessage(const char* Level, const char* Message, const char* Function) {
 	// Convert to local time.
 	err = _localtime64_s(&curentTime, &long_time);
 	err = asctime_s(timebuf, 26, &curentTime);
+
+	//date to file
 	//mabe figure out how to fill blank spaces with 0
-	fprintf(log, "\n%d-%2d-%2d    %2d:%2d:%2d\n", (curentTime.tm_year + 1900), (curentTime.tm_mon + 1), (curentTime.tm_mday), (curentTime.tm_hour), (curentTime.tm_min), (curentTime.tm_sec));//convert all to numbers, and in 24 hour tme
+	fprintf(log, "[%d-%2d-%2d  %2d:%2d:%2d]  ", (curentTime.tm_year + 1900), (curentTime.tm_mon + 1), (curentTime.tm_mday), (curentTime.tm_hour), (curentTime.tm_min), (curentTime.tm_sec));//convert all to numbers, and in 24 hour tme
+	fprintf(log, "[%s] %s %s\n", Level, Message, Function);//prints the contence for the log
 
-	
-	//localtime_s();
-	//fprintf(log, "[%s]%s%s%s\n", asctime_s(local_time), Level, Message, Function);
-
-	/*char* current_day, * current_time;
-	system("date +%F");
-	system("date +%T");
-	printf("%c", current_day);*/
 
 	closeLogger(log);
 }
