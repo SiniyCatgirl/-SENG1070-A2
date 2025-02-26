@@ -1,9 +1,9 @@
 #include "math_library.h"
 #include "Logger.h"
+#include "test_harness.h"
 #include <assert.h>
 #include <stdio.h>
 #include <time.h>
-#include "test_harness.h"
 
 /*TEST HARNESS TAKEN FROM TESTING EXAMPLES GIVEN IN SLIDE DECK*/
 //Positive Tests : Validate correct behavior for typical inputs.
