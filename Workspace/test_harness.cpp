@@ -1,6 +1,13 @@
 
 #include "test_harness.h"
 /*TEST HARNESS TAKEN FROM TESTING EXAMPLES GIVEN IN SLIDE DECK*/
+/*
+Programer Name: Trent
+Date created:31/01/2025
+last updated:27/02/2025
+discription:
+run the tests for the program
+*/
 //Positive Tests : Validate correct behavior for typical inputs.
 //
 
@@ -108,8 +115,12 @@ void test_divide() {
 }
 
 
-//other main, rename as testAll?
-int testAll(void) {
+
+/// <summary>
+/// used to run tests for the divide function
+/// </summary>
+/// <returns></returns>
+int testAll() {
     test_add();
     test_subtract();
     test_multiply();

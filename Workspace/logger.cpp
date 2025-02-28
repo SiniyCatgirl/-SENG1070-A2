@@ -1,18 +1,19 @@
 /*
 Programer Name: Trent
 Date created:31/01/2025
-last updated:9/02/2025
+last updated:27/02/2025
 discription:
 Handle file input/output operations.
 */
 #include "logger.h"
 
+
 /// <summary>
-/// 
+/// takes the level of the activity and the messge to log, as well as where the log took place
 /// </summary>
-/// <param name="data"></param>
-/// <param name="lineNum"></param>
-/// <returns>int</returns>
+/// <param name="Level">contains the Level (info, warning, error) for the log</param>
+/// <param name="Message">contains the the content of the log message</param>
+/// <param name="Function">were the log incedent happened</param>
 void logMessage(const char* Level, const char* Message, const char* Function) {
 	struct tm curentTime;
 	__time64_t long_time;
@@ -44,8 +45,7 @@ void logMessage(const char* Level, const char* Message, const char* Function) {
 /// <summary>
 /// closes the file that was opened
 /// </summary>
-/// <param name="file">file</param>
-/// <returns>int</returns>
+/// <param name="file">the pointer to where the file is stored</param>
 void closeLogger(FILE* file) {
 
 	if (fclose(file) == 0) {
