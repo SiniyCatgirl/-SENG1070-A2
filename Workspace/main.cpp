@@ -1,13 +1,14 @@
 /*
 Programer Name: Trent
 Date created:24/02/2025
-last updated:25/02/2025
+last updated:26/02/2025
 discription:
 
 */
 #include <stdio.h>
 #include <malloc.h>
 #include <stdlib.h>
+#include "math_library.h"
 #include "test_harness.h"
 
 int fileRead();
@@ -37,7 +38,6 @@ int main() {
 			if (mChoice == 1) {
 				tFA();
 				printf("test compleated and saved to Log file\n");
-
 			}
 			else if (mChoice == 2) {
 				tFS();
@@ -66,6 +66,16 @@ int main() {
 		//print log file
 		else if (mChoice == 3) {
 			result = fR();
+			if (result = 0) {
+				logMessage("INFO", "File sucsessfully closed", "");
+			}
+			else if (result = -1) {
+				logMessage("ERROR", "File was unable to be opened to read", "");
+			}
+			else if (result = -2) {
+				logMessage("ERROR", "File was unable to be closed", "");
+
+			}
 		}
 
 		else if (mChoice == 4) {
@@ -80,6 +90,10 @@ int main() {
 }
 
 
+/// <summary>
+/// reads the contents of the log file and prints it to the screen
+/// </summary>
+/// <returns>int -1(file opening error), 0(file closed sucsessfully), -2(file close error)</returns>
 int fileRead() {
 	char line[100] = "\0";
 	FILE* log = NULL;

@@ -21,10 +21,10 @@
     <ClCompile Include="test_harness.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Downloads\Testing %282%29\Testing\Testing\math_library.cpp">
+    <ClCompile Include="logger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="logger.cpp">
+    <ClCompile Include="math_library.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,10 +32,10 @@
     <ClInclude Include="logger.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\Downloads\Testing %282%29\Testing\Testing\math_library.h">
+    <ClInclude Include="test_harness.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="test_harness.h">
+    <ClInclude Include="math_library.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

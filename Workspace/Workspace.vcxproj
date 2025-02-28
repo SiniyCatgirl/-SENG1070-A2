@@ -19,13 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\Downloads\Testing %282%29\Testing\Testing\math_library.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="logger.cpp" />
+    <ClCompile Include="math_library.cpp" />
     <ClCompile Include="test_harness.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\Downloads\Testing %282%29\Testing\Testing\math_library.h" />
+    <ClInclude Include="math_library.h" />
     <ClInclude Include="test_harness.h" />
     <ClInclude Include="logger.h" />
   </ItemGroup>

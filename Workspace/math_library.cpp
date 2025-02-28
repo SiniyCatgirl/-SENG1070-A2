@@ -1,7 +1,6 @@
-#include "arithmetic.h"
+#include "math_library.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "../GoogleTest/pch.h"
 
 
 int add(int a, int b) {
