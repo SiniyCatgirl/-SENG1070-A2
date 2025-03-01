@@ -69,7 +69,7 @@ void test_multiply() {
     assert(multiply(2, 3) == 6);
     logMessage("INFO", "Tests passed succsessflly multiplying positive ints in", "multiply");
     assert(multiply(-1, 5) == -5);
-    logMessage("INFO", "Tests passed succsessflly multiplying Negative ints in", "multiply");
+    logMessage("INFO", "Tests passed succsessflly multiplying by Negative int in", "multiply");
     //negative tests
     //assert(multiply("a", "t") == 213);
     //assert(multiply(2.3, 1) == 3.3);
@@ -77,8 +77,6 @@ void test_multiply() {
 
     ////border tests
     //assert(multiply(2147483647, 5) == 10737418235);
-    //assert(multiply(-2147483647, -5) == 10737418235);
-    //assert(multiply(2147483647, -5) == -10737418235);
     //assert(multiply(2147483650, 9) == 19327352850);
     //assert(multiply(357913941, 6) == 2147483650);
     //assert(multiply(-2147483650, 9) == -19327352850);
@@ -105,8 +103,10 @@ void test_divide() {
 
 
     ////border tests
-    //assert(divide(2147483647, 2) == 1073741823.5);
-    //assert(divide(2147483647, -2147483647) == -1);
+    assert(divide(2147483647, 2) == 1073741823.5);
+    logMessage("INFO", "Tests passed succsessflly dividing positive ints near positive max value in", "divide");
+    assert(divide(2147483647, -2147483647) == -1);
+    logMessage("INFO", "Tests passed succsessflly dividing with Negative int near Negative and positive max value in", "divide");
     //assert(divide(2147483647, -2147483650) == -0.9999999986030161);
     //assert(divide(2147483647, 2147483648) == 0.9999999995343387);
 
