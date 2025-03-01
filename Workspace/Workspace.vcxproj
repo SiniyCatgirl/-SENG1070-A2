@@ -19,10 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="logger.cpp" />
-    <ClCompile Include="math_library.cpp" />
-    <ClCompile Include="test_harness.cpp" />
+    <ClCompile Include="main.c" />
+    <ClCompile Include="logger.c" />
+    <ClCompile Include="math_library.c" />
+    <ClCompile Include="test_harness.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="math_library.h" />
